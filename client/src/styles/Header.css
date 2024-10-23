@@ -1,0 +1,138 @@
+/* General styling for the navigation */
+header {
+  background-color: palevioletred;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* Space between left and right navigation */
+  align-items: center; /* Center items vertically */
+}
+
+.left-nav,
+.right-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.left-nav li {
+  margin-right: 20px; /* Spacing for left navigation */
+}
+
+.right-nav li {
+  margin-left: 20px; /* Spacing for right navigation */
+}
+
+nav li:last-child {
+  margin-right: 0; /* Remove right margin from the last item */
+}
+
+nav li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+nav li a:hover {
+  color: #007bff;
+}
+
+nav li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+nav li button:hover {
+  color: #007bff;
+}
+
+/* Styling for the user dropdown */
+.user-dropdown {
+  position: relative;
+}
+
+.user-dropdown button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.user-dropdown button:hover {
+  color: #007bff;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  list-style: none;
+  width: 180px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown-menu li a,
+.dropdown-menu li button {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-weight: normal;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li button:hover {
+  color: #007bff;
+  background-color: #f8f9fa;
+}
+
+/* User email display styling */
+.dropdown-menu li:first-child {
+  font-weight: bold;
+  color: #007bff;
+  cursor: default;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+/* Dropdown arrow styling */
+.user-dropdown button::after {
+  content: '▼';
+  font-size: 12px;
+  margin-left: 5px;
+  transition: transform 0.2s;
+}
+
+.user-dropdown button[aria-expanded='true']::after {
+  transform: rotate(180deg);
+}
