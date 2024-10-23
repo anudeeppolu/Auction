@@ -1,11 +1,16 @@
 ---
+title: "Online Auction System"
+author: "Anudeep"
+---
 
 # Online Auction System
 
 ## Author
+
 **Anudeep**
 
 ## Project Overview
+
 This is a full-stack web application that allows users to bid on auction items. The app supports user registration, login, and enables authenticated users to create, view, update, delete auction items, and place bids. It is built using:
 
 - **Backend**: Node.js with Express and MongoDB.
